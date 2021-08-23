@@ -3,15 +3,12 @@ import torch.nn.functional as F
 import torch.nn as nn
 import torch.optim as optim
 import torchvision.transforms as transforms
-# from dataset import Cifar10Dataset
 from tensorboardX import SummaryWriter
 import torchvision
 from data_loader import *
 from model import *
 from plot import show_acc_curv
 from options import Options
-from se_resnet import *
-from se_resnext import *
 from attention_modify import *
 import random
 
@@ -183,5 +180,4 @@ def run(device):
 if __name__ == '__main__':
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    print(device)
     run(device)
