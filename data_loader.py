@@ -230,7 +230,7 @@ class Bosphorus_multichannel(data.Dataset):
 
         # Setup transforms
         self.transform = transforms.Compose([
-            transforms.Resize([112,112]),
+            transforms.Resize([224,224]),
             transforms.ToTensor(),
         ])
 
